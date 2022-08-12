@@ -36,7 +36,7 @@ passport.use(new GoogleStrategy({
 //   done(null, user.id);
 // });
 passport.serializeUser(function(user, cb){
-	done(null, user.id); // <- storing in our session cookie the logged in users id
+	cb(null, user.id); // <- storing in our session cookie the logged in users id
 })
 
 passport.deserializeUser(function(userId, done){
