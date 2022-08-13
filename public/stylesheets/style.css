@@ -18,3 +18,39 @@
 .collection-item form {
   margin-top: -5px;
 }
+nav {
+  background: greenyellow;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  padding-right: 30px;
+  font-family: 'Capriola', sans-serif;
+  font-family: 'Fredoka One', cursive;
+  font-family: 'Mochiy Pop One', sans-serif;
+  color: green;
+
+}
+
+a{
+  color: green;
+}
+
+h1 {
+  font-family: 'Capriola', sans-serif;
+  font-family: 'Fredoka One', cursive;
+  font-family: 'Mochiy Pop One', sans-serif;
+  text-align: start;
+  color: green;
+  padding: 0 0 0 20px;
+
+}
+
+#new-district {
+  color: green;
+  font-family: 'Capriola', sans-serif;
+  font-family: 'Fredoka One', cursive;
+  font-family: 'Mochiy Pop One', sans-serif;
+  padding: 10px;
+  
+
+}

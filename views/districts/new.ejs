@@ -1,4 +1,11 @@
-<h2>Enter a New District</h2>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Capriola&family=Fredoka+One&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<%- include('../partials/header') %>
+
+<h2 id="new-district">Enter a New District</h2>
 <form action="/districts/new" method="POST">
   <label>District Name:
     <input type="text" name="districtName">
