@@ -1,4 +1,5 @@
 //const district = require('../models/district');
+const district = require('../models/district');
 const District = require('../models/district');
 
 module.exports = {
@@ -8,7 +9,17 @@ module.exports = {
 }
 
 function index(req, res){
-    res.render('schools.ejs')
+    District.find({}, function(err, districtDocuments){
+        console.log(districtDocuments, '<-all districts')
+        if (err){
+            res.send('error finding the districts')
+        }
+        res.render('districts/index.ejs', {
+            movies: districtDocuments
+        });
+    });
+    
+    
 }
 
 function newDistrict(req, res){
@@ -20,7 +31,7 @@ function create(req, res) {
     District.create(req.body, function(err, districtDocuments) {
         if(err) {
             console.log(err, '<-err in create controller');
-            return res.redirect('/');
+            return res.render('/districts/new.ejs');
         }
         console.log(districtDocuments, '<-added to db')
     })
