@@ -1,1 +1,24 @@
-<h2>hello</h2>>
+<%- include('../partials/header') %>
+<table id="list">
+  <thead>
+    <tr>
+      <th>Picture:</th>
+      <th>District Name:</th>
+      <th>Address:</th>
+      <th></th>
+    </tr>
+  </thead>
+   <tbody>
+    <% districts.forEach(function(d) { %>
+      <tr>
+        <td><%= d.districtPic %></td>
+        <td><%= d.districtName %></td>
+        <td><%= d.address %></td>
+        <!-- <td><a href="/districts/<%= d._id %>">DETAILS</a>-->
+        </td> 
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  
+<%- include('../partials/footer') %> 

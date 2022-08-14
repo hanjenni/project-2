@@ -15,7 +15,7 @@ function index(req, res){
             res.send('error finding the districts')
         }
         res.render('districts/index.ejs', {
-            movies: districtDocuments
+            districts: districtDocuments
         });
     });
     
@@ -31,7 +31,7 @@ function create(req, res) {
     District.create(req.body, function(err, districtDocuments) {
         if(err) {
             console.log(err, '<-err in create controller');
-            return res.render('/districts/new.ejs');
+            return res.render('/districts/index.ejs');
         }
         console.log(districtDocuments, '<-added to db')
     })
