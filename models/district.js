@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 
 const districtSchema = new mongoose.Schema({
+    districPic : {
+        type: String
+    },
     districtName: {
         type: String,
         required: true,

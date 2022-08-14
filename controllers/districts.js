@@ -1,9 +1,14 @@
-const district = require('../models/district');
+//const district = require('../models/district');
 const District = require('../models/district');
 
 module.exports = {
     new: newDistrict,
     create,
+    index
+}
+
+function index(req, res){
+    res.render('schools.ejs')
 }
 
 function newDistrict(req, res){
@@ -15,7 +20,9 @@ function create(req, res) {
     District.create(req.body, function(err, districtDocuments) {
         if(err) {
             console.log(err, '<-err in create controller');
-            return res.render('districts/new.ejs');
+            return res.redirect('/');
         }
+        console.log(districtDocuments, '<-added to db')
     })
+
 }
