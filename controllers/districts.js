@@ -5,7 +5,15 @@ const District = require('../models/district');
 module.exports = {
     new: newDistrict,
     create,
-    index
+    index,
+    show
+}
+
+function show(req, res) {
+    District.findById(req.params.id, function(err, districtInfo) {
+        res.render('districts/show.ejs', {title: 'District Details', districtInfo})
+        console.log(districtInfo, '<-single district info');
+    } )
 }
 
 function index(req, res){

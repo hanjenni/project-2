@@ -1,24 +1,17 @@
 <%- include('../partials/header') %>
-<table id="list">
-  <thead>
-    <tr>
-      <th>Picture:</th>
-      <th>District Name:</th>
-      <th>Address:</th>
-      <th></th>
-    </tr>
-  </thead>
-   <tbody>
-    <% districts.forEach(function(d) { %>
-      <tr id="school-list">
-        <td><%= d.districtPic %></td>
-        <td><%= d.districtName %></td>
-        <td><%= d.address %></td>
-        <!-- <td><a href="/districts/<%= d._id %>">DETAILS</a>-->
-        </td> 
-      </tr>
-      <% }); %>
-    </tbody>
-  </table>
+ <div class="container">
+
+ <% districts.forEach(function(d) { %>
+      <tr class="school-list">
+  <div class="image-con">School Picture:
+        <%= d.districtPic %></div>
+  <div class="name-con">District Name:
+        <%= d.districtName %></div>
+  <div class="address-con">Address: 
+     <%= d.address %></div> 
+ <div class="details"><a href="/districts/<%= d._id %>">DETAILS</a></div>
+<% }); %>
+   
+ </div> 
   
 <%- include('../partials/footer') %> 

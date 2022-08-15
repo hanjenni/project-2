@@ -66,3 +66,13 @@ h1 {
   direction: flex;
   flex-direction: row;
 }
+
+.container {
+  color: purple;
+
+}
+
+.image-con {
+  max-height: 70vh;
+  overflow:hidden;
+}
