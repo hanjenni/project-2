@@ -1,17 +1,18 @@
 <%- include('../partials/header') %>
- <div class="container">
-
+ <h1>All School Districts</h1>
+<!--This is the page that shows all districts-->
+<section class="container">
  <% districts.forEach(function(d) { %>
-      <tr class="school-list">
-  <div class="image-con">School Picture:
-        <%= d.districtPic %></div>
-  <div class="name-con">District Name:
-        <%= d.districtName %></div>
-  <div class="address-con">Address: 
-     <%= d.address %></div> 
- <div class="details"><a href="/districts/<%= d._id %>">DETAILS</a></div>
+  <div class="all-list">
+      District Name:
+        <%= d.districtName %>
+        <br>
+      Address: 
+     <%= d.address %>
+     <br>
+ <a href="/districts/<%= d._id %>">DETAILS</a></div>
 <% }); %>
    
- </div> 
+ </section> 
   
 <%- include('../partials/footer') %> 

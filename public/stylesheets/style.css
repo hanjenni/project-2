@@ -1,6 +1,8 @@
 
 body{
   background-color: rgb(228, 228, 228);
+  margin: 0;
+  padding: 0;
 }
 nav {
   background: greenyellow;
@@ -68,11 +70,26 @@ h1 {
 }
 
 .container {
-  color: purple;
+  color: green;
+  position: relative;
+  width: 1200px;
+  height: 300px;
+  margin: 100px auto;
 
 }
 
-.image-con {
-  max-height: 70vh;
+.all-list {
+  position: relative;
+  width: calc(400px - 30px);
+  height: calc(300px - 30px);
+  background: rgb(202, 202, 202);
+  float: left;
+  margin: 15px;
+  box-sizing: border-box;
   overflow:hidden;
+  border-radius: 10px;
+  text-align: center;
+  padding: 50px;
+  font-family: 'Nanum Myeongjo', serif;
 }
+

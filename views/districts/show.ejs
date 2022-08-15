@@ -2,8 +2,8 @@
 
 <!--clicked information-->
 <h2>School Information</h2><!--make title appear later-->
-<div>Picture
-    <%= districtInfo.districtPic %> 
+<!-- <div>Picture
+    <%= districtInfo.districtPic %>  -->
 </div>
 <div>District Name:
     <%= districtInfo.districtName %> 
@@ -60,6 +60,8 @@ action="/districts/<%= districtInfo._id %>/reviews">
       </thead>
       <tbody>
         <% districtInfo.reviews.forEach(function(d) { %>
+
+          
           <tr>
             <td><%= d.createdAt.toLocaleDateString() %>
             <td><%= d.comRating %></td>
