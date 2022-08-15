@@ -15,10 +15,11 @@
 <body>
   <nav>
     <a href="/">HOME</a>
-    <a href="/districts/new">ADD A DISTRICT</a> 
-    <a href="/districts">ALL DISTRICTS</a>
+    
     
     <% if (user) { %>
+      <a href="/districts">ALL DISTRICTS</a>
+        <a href="/districts/new">ADD A DISTRICT</a> 
         <a href="/logout">LOG OUT</a>
       <% } else { %>
         <a href="/auth/google" class="login">LOG IN</a>

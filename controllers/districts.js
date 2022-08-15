@@ -12,7 +12,7 @@ module.exports = {
 function show(req, res) {
     District.findById(req.params.id, function(err, districtInfo) {
         res.render('districts/show.ejs', {title: 'District Details', districtInfo})
-        console.log(districtInfo, '<-single district info');
+        console.log(districtInfo, '<-show all')
     } )
 }
 

@@ -1,5 +1,7 @@
+<%- include('../partials/header') %>
+
 <!--clicked information-->
-School Information <!--make title appear later-->
+<h2>School Information</h2><!--make title appear later-->
 <div>Picture
     <%= districtInfo.districtPic %> 
 </div>
@@ -9,3 +11,65 @@ School Information <!--make title appear later-->
 <div>Address:
     <%= districtInfo.address %> 
 </div>
+
+<!--submit review box-->
+<br><br><h2>District Review</h2>
+<form id="review-info" method="POST"
+action="/districts/<%= districtInfo._id %>/reviews">
+<label>Review:</label>
+<textarea name="content"></textarea>
+<label>Community Rating:</label>
+<select name="comRating">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+<label>Admin Support Rating:</label>
+<select name="adminRating">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+<label>Work-Life Balance Rating:</label>
+<select name="workRating">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+</select>
+<input type="submit" value="Add Review">
+</form>
+</form>
+
+<!--show the reviews-->
+<% if (districtInfo.reviews.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Date:</th>
+          <th>Community:</th>
+          <th>Admin Support:</th>
+          <th>Work-Life Balance:</th>
+          <th>Review:</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% districtInfo.reviews.forEach(function(d) { %>
+          <tr>
+            <td><%= d.createdAt.toLocaleDateString() %>
+            <td><%= d.comRating %></td>
+            <td><%= d.adminRating %></td>
+            <td><%= d.workRating %></td>
+            <td><%= d.content %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <h5>No Reviews Yet</h5>
+  <% } %>
