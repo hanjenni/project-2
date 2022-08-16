@@ -11,10 +11,15 @@ const reviewSchema = new mongoose.Schema({
     workRating: {
         type: Number, min: 1, max: 5
     },
-},
+    user: {
+        type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true}, 
+        userName: String,
+        userAvatar: String
+    },
 {
     timestamps: true,
-});
+}
+);
 
 
 const districtSchema = new mongoose.Schema({

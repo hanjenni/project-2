@@ -11,7 +11,9 @@
 
 </section>
 
+
 <!--submit review box-->
+<% if (user) { %>
 <br><br><h2>District Review</h2>
 <form id="review-info" method="POST"
 action="/districts/<%= districtInfo._id %>/reviews">
@@ -50,6 +52,7 @@ action="/districts/<%= districtInfo._id %>/reviews">
     <table>
       <thead>
         <tr>
+          <th>Member:</th>
           <th>Date:</th>
           <th>Community:</th>
           <th>Admin Support:</th>
@@ -58,10 +61,15 @@ action="/districts/<%= districtInfo._id %>/reviews">
         </tr>
       </thead>
       <tbody>
+        <% let total = 0 %> 
         <% districtInfo.reviews.forEach(function(d) { %>
-
+          <% total += d.comRating %> 
+          <% total += d.adminRating %> 
+          <% total += d.workRating %> 
+         
           
           <tr>
+            <td class="review-user"><img alt="avatar" src="<%= d.userAvatar %>" referrerpolicy="no-referrer" ><%= d.userName %></td>
             <td><%= d.createdAt.toLocaleDateString() %>
             <td><%= d.comRating %></td>
             <td><%= d.adminRating %></td>
@@ -69,8 +77,14 @@ action="/districts/<%= districtInfo._id %>/reviews">
             <td><%= d.content %></td>
           </tr>
         <% }); %>
-      </tbody>
+          <tr>
+          <td colspan="3"></td>
+          <td><strong><%= (total / districtInfo.reviews.length).toFixed(1) %></strong></td> %> </td>
+          </tr>
+        </tbody>
     </table>
   <% } else { %>
     <h5>No Reviews Yet</h5>
+  <% } %>
+
   <% } %>
