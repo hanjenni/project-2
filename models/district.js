@@ -23,9 +23,7 @@ const reviewSchema = new mongoose.Schema({
 
 
 const districtSchema = new mongoose.Schema({
-    //  districPic : {
-    //      type: String
-    // },
+    
     districtName: {
         type: String,
         required: true,

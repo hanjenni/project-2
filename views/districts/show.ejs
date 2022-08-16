@@ -75,7 +75,17 @@ action="/districts/<%= districtInfo._id %>/reviews">
             <td><%= d.adminRating %></td>
             <td><%= d.workRating %></td>
             <td><%= d.content %></td>
+            <td>
+              <% if (user?._id.equals(d.user)) { %>
+                <form action="/reviews/<%= d._id %>?_method=DELETE" method="POST">
+                  <button type="submit">X</button>
+                </form>
+              <% } %>
+            </td>
+          
           </tr>
+
+
         <% }); %>
           <tr>
           <td colspan="3"></td>
