@@ -1,15 +1,14 @@
 <%- include('../partials/header') %>
- <h1>All School Districts</h1>
+ <h1 id="allSchoolDistricts">All School Districts</h1>
 <!--This is the page that shows all districts-->
 <section class="container">
  <% districts.forEach(function(d) { %>
   <div class="all-list">
-      District Name:
-        <%= d.districtName %>
-        <br>
-      Address: 
-     <%= d.address %>
-     <br>
+      <h5>District Name:</h3>
+       <h3> <%= d.districtName %></h3>
+      <h5>Address: </h3>
+     <h3><%= d.address %></h3>
+     
  <a href="/districts/<%= d._id %>">DETAILS</a></div>
 <% }); %>
    

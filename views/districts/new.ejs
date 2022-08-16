@@ -6,12 +6,16 @@
 <%- include('../partials/header') %>
 
 <section id="district-layout">
-<h2 id="new-district">Enter a New District</h2>
+
 <form action="/districts" method="POST">
+ <!--Enter a New District Page-->
+ 
   <!-- <label>Picture:
     <input name="districtPic">
   </label><br> -->
   <br>
+  <div class="newDistrict">
+    <h2>Enter a New District</h2>
   <label>District Name:
     <input type="text" name="districtName">
   </label><br>
@@ -22,4 +26,5 @@
   <br>
   <input type="submit" value="Add District">
 </form>
+</div>
 </section>
