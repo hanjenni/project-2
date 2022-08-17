@@ -8,15 +8,28 @@ module.exports = {
 
 }
 
-async function update(req, res){
-  try {
-    const updateComment = await District.findByIdAndUpdate(req.params.id, req.body)
-    console.log(req.params.id, '<-update')
-    res.redirect(('districts/edit.ejs', {districtInfo}))
-  }catch (err) {
-    res.send(err)
-  }
+function update(req, res) {
+  District.findByIdAndUpdate(
+    req.params.District, 
+    req.body, 
+    {new: true}, 
+    (err, districtInfo) => {
+      if (err) return res.redirect(`/districts/${districtInfo._id}`);
+      res.render('districts/edit.ejs', {districtInfo});
+    }
+  )
 }
+
+
+//async function update(req, res){
+  // try {
+    //const updateComment = await District.findByIdAndUpdate(req.params.id, req.body)
+  //   console.log(req.params.id, '<-update')
+  //   res.redirect(('districts/edit.ejs', {districtInfo}))
+  // }catch (err) {
+  //   res.send(err)
+  //}
+// }
 
 
 function edit(req, res) {

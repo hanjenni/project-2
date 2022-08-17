@@ -1,9 +1,10 @@
 <%- include('../partials/header') %>
 <% if (user) { %>
-    <br><br><h2>District Review</h2>
+    <br><br><h2>Edit District Review</h2>
 
-    <form id="review-info" method="POST"
-    action="/districts/<%= districtInfo._id %>/reviews">
+
+
+  <form action="/districts/<%= districtInfo._id %>/reviews?_method=PUT" method="POST"></form>
     
 
     <label>Review:</label>
