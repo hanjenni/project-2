@@ -13,37 +13,38 @@
 
 <!--submit review box-->
 <% if (user) { %>
-  <section class="districtReview">
-<br><br><h2>District Review</h2>
+  
+<br><br><h2 id="headline">District Review</h2>
 <form id="review-info" method="POST"
 action="/districts/<%= districtInfo._id %>/reviews">
-<label>Review:</label>
-<textarea name="content"></textarea>
-<label>Community Rating:</label>
-<select name="comRating">
+<section class="districtReview">
+<label class="review">Review:</label>
+<br><textarea class="review" name="content"></textarea><br>
+<br><label class="comRating">Community Rating:</label>
+<br><select name="comRating">
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
   <option value="4">4</option>
   <option value="5">5</option>
-</select>
-<label>Admin Support Rating:</label>
-<select name="adminRating">
+</select><br>
+<br><label>Admin Support Rating:</label>
+<br><select name="adminRating">
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
   <option value="4">4</option>
   <option value="5">5</option>
-</select>
-<label>Work-Life Balance Rating:</label>
-<select name="workRating">
+</select><br>
+<br><label>Work-Life Balance Rating:</label>
+<br><select name="workRating">
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>
   <option value="4">4</option>
   <option value="5">5</option>
-</select>
-<input type="submit" value="Add Review">
+</select><br>
+<br><input type="submit" value="Add Review">
 </form>
 </form>
 </section>
@@ -88,32 +89,32 @@ action="/districts/<%= districtInfo._id %>/reviews">
 <br><br><h2>Edit District Review</h2>
   <form action="/districts/<%= districtInfo._id %>/reviews/<%= d._id %>?_method=PUT" method="POST">
     <label>Review:</label>
-      <textarea name = "content"></textarea>
-      <label>Community Rating:</label>
-        <select name="comRating">
+    <br><textarea name = "content"></textarea>
+    <br><label>Community Rating:</label>
+    <br><select name="comRating">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
           <option value="5">5</option>
         </select>
-      <label>Admin Support Rating:</label>
-        <select name="adminRating">
+      <br><label>Admin Support Rating:</label>
+      <br><select name="adminRating">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
           <option value="5">5</option>
         </select>
-      <label>Work-Life Balance Rating:</label>
-        <select name="workRating">
+      <br><label>Work-Life Balance Rating:</label>
+      <br><select name="workRating">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
           <option value="5">5</option>
         </select>
-      <input type="submit" value="Update Review">
+        <br><input type="submit" value="Update Review">
      </form>
    <% } %>
   </td> 

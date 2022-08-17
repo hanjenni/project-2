@@ -12,7 +12,6 @@ nav {
   justify-content: space-around;
   padding-right: 30px;
   font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
   color: #3B3A39;
 
 }
@@ -20,7 +19,6 @@ nav {
 a{
   color: #3B3A39;
   font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
   
 }
 
@@ -106,9 +104,14 @@ a{
   padding: 10px;
   font-family: 'Montserrat', sans-serif;
   border-style: solid;
-  border-color: #00917A;
+  border-color: #3B3A39;
+  color: #3B3A39;
+  box-shadow: 10px 5px 5px #3B3A39;
+}
+
+.detailsButton {
   color: #00917A;
-  box-shadow: 10px 5px 5px #00917A;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #allSchoolDistricts {
@@ -149,6 +152,7 @@ a{
 
 #mainPage {
   padding: 30px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .image {
@@ -174,11 +178,13 @@ a{
 table thead th {
   padding: 5px;
   border-bottom: 2px solid #424748;
+  font-family: 'Montserrat', sans-serif;
 }
 
 table td {
   padding: 10px;
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a:link { text-decoration: none; }
@@ -190,12 +196,31 @@ a:active { text-decoration: none; }
  display: flex;
  flex-direction: column;
  justify-content: center;
+ font-family: 'Montserrat', sans-serif;
 }
 
 .e.page {
   align-items: center;
+  font-family: 'Montserrat', sans-serif;
 
 }
+
+#headline {
+  color: #00917A;
+  display: flex;
+  justify-content: center;
+}
+
+.districtReview {
+  color: #3B3A39;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  border-color: #EBDBCA;
+  border-style: solid;
+  background-color: #EBDBCA;
+
+}
+
 
 
 
