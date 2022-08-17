@@ -4,44 +4,38 @@ module.exports = {
     create,
     delete: deletePost,
     edit,
-    update
+    
 
 }
 
-function update(req, res) {
-  District.findByIdAndUpdate(
-    req.params.District, 
-    req.body, 
-    {new: true}, 
-    (err, districtInfo) => {
-      if (err) return res.redirect(`/districts/${districtInfo._id}`);
-      res.render('districts/edit.ejs', {districtInfo});
-    }
-  )
-}
-
-
-//async function update(req, res){
-  // try {
-    //const updateComment = await District.findByIdAndUpdate(req.params.id, req.body)
-  //   console.log(req.params.id, '<-update')
-  //   res.redirect(('districts/edit.ejs', {districtInfo}))
-  // }catch (err) {
-  //   res.send(err)
-  //}
-// }
-
-
-function edit(req, res) {
-    District.findOne({'reviews._id': req.params.id, 'reviews.user': req.user._id}).then(function(districtInfo) {
-      console.log(districtInfo, '<-edit')
-        if (!districtInfo) return res.redirect('/districts');
-        districtInfo.save(function(err){
-        res.render('districts/edit.ejs', {districtInfo});
-    })
-    })
-
+async function edit(req, res) {
+console.log(req.body, '<-edits')
+const districtDoc = await District.findById(req.params.districtId)
+console.log(districtDoc, '<-district doc')
+const review = districtDoc.reviews.id(req.params.reviewId)
+console.log(review)
+review.content = req.body.content;
+review.comRating = req.body.comRating;
+review.adminRating = req.body.adminRating;
+review.workRating = req.body.workRating;
+districtDoc.save(function(err){ 
+  res.redirect(`/districts/${districtDoc._id}`)
+})
+ 
+  
   }
+
+
+// function edit(req, res) {
+//     District.findOne({'reviews._id': req.params.id, 'reviews.user': req.user._id}).then(function(districtInfo) {
+//       console.log(districtInfo, '<-edit')
+//         if (!districtInfo) return res.redirect('/districts');
+//         districtInfo.save(function(err){
+//         res.render('districts/edit.ejs', {districtInfo});
+//     })
+//     })
+
+//   }
 
 
 function deletePost(req, res, next) {

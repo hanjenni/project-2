@@ -5,7 +5,7 @@ const reviewsController = require('../controllers/reviews');
 router.post('/districts/:id/reviews', reviewsController.create);
 router.delete('/reviews/:id', reviewsController.delete);
 
-router.get('/reviews/:id/edit', reviewsController.edit);
-router.put('/:id', reviewsController.update);
+router.put('/districts/:districtId/reviews/:reviewId', reviewsController.edit);
+//router.put('/:id', reviewsController.update);
 
 module.exports = router; 
