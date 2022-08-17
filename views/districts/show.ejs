@@ -14,6 +14,7 @@
 
 <!--submit review box-->
 <% if (user) { %>
+  <section class="districtReview">
 <br><br><h2>District Review</h2>
 <form id="review-info" method="POST"
 action="/districts/<%= districtInfo._id %>/reviews">
@@ -46,10 +47,12 @@ action="/districts/<%= districtInfo._id %>/reviews">
 <input type="submit" value="Add Review">
 </form>
 </form>
+</section>
 
 <!--show the reviews-->
+<section class="reviewPage">
 <% if (districtInfo.reviews.length) { %>
-    <table>
+    <table class="reviewTable">
       <thead>
         <tr>
           <th>Member:</th>
@@ -78,7 +81,7 @@ action="/districts/<%= districtInfo._id %>/reviews">
             <td>
               <% if (user?._id.equals(d.user)) { %>
                 <form action="/reviews/<%= d._id %>?_method=DELETE" method="POST">
-                  <button type="submit">X</button>
+                  <button type="submit">Delete</button>
                 </form>
 
                 <a href="/reviews/<%= d._id %>/edit"><button class="edit-button" type="button">Edit Post</button></a>
@@ -100,3 +103,5 @@ action="/districts/<%= districtInfo._id %>/reviews">
   <% } %>
 
   <% } %>
+
+</section>

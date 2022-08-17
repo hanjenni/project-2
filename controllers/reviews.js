@@ -4,15 +4,31 @@ module.exports = {
     create,
     delete: deletePost,
     edit,
+    update
 
 }
 
+async function update(req, res){
+  try {
+    const updateComment = await District.findByIdAndUpdate(req.params.id, req.body)
+    console.log(req.params.id, '<-update')
+    res.redirect(('districts/edit.ejs', {districtInfo}))
+  }catch (err) {
+    res.send(err)
+  }
+}
+
+
 function edit(req, res) {
     District.findOne({'reviews._id': req.params.id, 'reviews.user': req.user._id}).then(function(districtInfo) {
+      console.log(districtInfo, '<-edit')
         if (!districtInfo) return res.redirect('/districts');
+        districtInfo.save(function(err){
         res.render('districts/edit.ejs', {districtInfo});
     })
-    }
+    })
+
+  }
 
 
 function deletePost(req, res, next) {

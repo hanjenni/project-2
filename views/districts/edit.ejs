@@ -1,10 +1,13 @@
 <%- include('../partials/header') %>
 <% if (user) { %>
     <br><br><h2>District Review</h2>
+
     <form id="review-info" method="POST"
     action="/districts/<%= districtInfo._id %>/reviews">
+    
+
     <label>Review:</label>
-    <textarea name="content"></textarea>
+    <textarea name = "content"></textarea>
     <label>Community Rating:</label>
     <select name="comRating">
       <option value="1">1</option>
