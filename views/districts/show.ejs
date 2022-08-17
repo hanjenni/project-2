@@ -80,6 +80,8 @@ action="/districts/<%= districtInfo._id %>/reviews">
                 <form action="/reviews/<%= d._id %>?_method=DELETE" method="POST">
                   <button type="submit">X</button>
                 </form>
+
+                <a href="/reviews/<%= d._id %>/edit"><button class="edit-button" type="button">Edit Post</button></a>
               <% } %>
             </td>
           

@@ -2,9 +2,18 @@ const District = require('../models/district');
 
 module.exports = {
     create,
-    delete: deletePost
+    delete: deletePost,
+    edit,
 
 }
+
+function edit(req, res) {
+    District.findOne({'reviews._id': req.params.id, 'reviews.user': req.user._id}).then(function(districtInfo) {
+        if (!districtInfo) return res.redirect('/districts');
+        res.render('districts/edit.ejs', {districtInfo});
+    })
+    }
+
 
 function deletePost(req, res, next) {
     District.findOne({'reviews._id': req.params.id, 'reviews.user': req.user._id}).then(function(districtInfo) {
