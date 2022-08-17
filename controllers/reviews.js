@@ -4,8 +4,6 @@ module.exports = {
     create,
     delete: deletePost,
     edit,
-    
-
 }
 
 async function edit(req, res) {
@@ -21,21 +19,8 @@ review.workRating = req.body.workRating;
 districtDoc.save(function(err){ 
   res.redirect(`/districts/${districtDoc._id}`)
 })
- 
   
-  }
-
-
-// function edit(req, res) {
-//     District.findOne({'reviews._id': req.params.id, 'reviews.user': req.user._id}).then(function(districtInfo) {
-//       console.log(districtInfo, '<-edit')
-//         if (!districtInfo) return res.redirect('/districts');
-//         districtInfo.save(function(err){
-//         res.render('districts/edit.ejs', {districtInfo});
-//     })
-//     })
-
-//   }
+}
 
 
 function deletePost(req, res, next) {
@@ -50,9 +35,7 @@ function deletePost(req, res, next) {
     });
   }
   
-
-
-
+  
 function create(req, res){
     console.log(req.params.id, '<-params district id')
     console.log(req.body, '<-content of review')

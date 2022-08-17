@@ -13,7 +13,7 @@ function show(req, res) {
     District.findById(req.params.id, function(err, districtInfo) {
         res.render('districts/show.ejs', {title: 'District Details', districtInfo})
         console.log(districtInfo, '<-show all')
-    } )
+    });
 }
 
 function index(req, res){
@@ -25,9 +25,7 @@ function index(req, res){
         res.render('districts/index.ejs', {
             districts: districtDocuments
         });
-    });
-    
-    
+    });   
 }
 
 function newDistrict(req, res){
@@ -43,6 +41,6 @@ function create(req, res) {
         }
         res.redirect('/districts');
         console.log(districtDocuments, '<-added to db')
-    })
+    });
 
 }

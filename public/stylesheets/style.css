@@ -24,13 +24,13 @@ a{
   
 }
 
-h1 {
+/* h1 {
   font-family: 'Montserrat', sans-serif;
   text-align: start;
   color: #3B3A39;
   padding: 0 0 0 20px;
 
-}
+} */
 
 #new-district {
   color: #3B3A39;
@@ -54,8 +54,6 @@ h1 {
   text-align: center;
   border-color: #3B3A39;
   border-style: solid;
-
-
 
 }
 
@@ -138,7 +136,15 @@ h1 {
 }
 
 .infoPage {
-  padding: 0 0 0 30px;
+  padding: 10px 0 0 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #3B3A39;
+
+}
+
+.i.page {
+  text-decoration: underline;
 }
 
 #mainPage {
@@ -157,11 +163,12 @@ h1 {
   border-style: dashed;
 }
 
-.reviewTable, .districtReview {
+.reviewTable {
   color: #3B3A39;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  font-family: 'Montserrat', sans-serif;
 }
 
 table thead th {
@@ -178,3 +185,18 @@ a:link { text-decoration: none; }
 a:visited { text-decoration: none; }
 a:hover { text-decoration: none; }
 a:active { text-decoration: none; }
+
+.editReview {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+
+.e.page {
+  align-items: center;
+
+}
+
+
+
+  
