@@ -13,36 +13,18 @@ nav {
   padding-right: 30px;
   font-family: 'Montserrat', sans-serif;
   color: #3B3A39;
-
 }
 
 a{
   color: #3B3A39;
-  font-family: 'Montserrat', sans-serif;
-  
+  font-family: 'Montserrat', sans-serif; 
 }
-
-/* h1 {
-  font-family: 'Montserrat', sans-serif;
-  text-align: start;
-  color: #3B3A39;
-  padding: 0 0 0 20px;
-
-} */
 
 #new-district {
   color: #3B3A39;
   font-family: 'Montserrat', sans-serif;
-  padding: 10px;
-  
+  padding: 10px; 
 }
-
-/* h2 {
-  font-family: 'Nanum Myeongjo', serif;
-  color: green;
-  padding: 10px;
-
-} */
 
 #about-section {
   color: #3B3A39;
@@ -52,7 +34,6 @@ a{
   text-align: center;
   border-color: #3B3A39;
   border-style: solid;
-
 }
 
 #resources{
@@ -87,7 +68,6 @@ a{
   height: 300px;
   margin: 10px auto;
   font-family: 'Montserrat', sans-serif;
-
 }
 
 .all-list {
@@ -118,7 +98,6 @@ a{
   text-align: center;
   padding: 20px;
   font-family: 'Montserrat', sans-serif;
- 
 }
 
 .newDistrict {
@@ -204,7 +183,6 @@ a:active { text-decoration: none; }
 .e.page {
   align-items: center;
   font-family: 'Montserrat', sans-serif;
-
 }
 
 #headline {
@@ -220,7 +198,6 @@ a:active { text-decoration: none; }
   border-color: #EBDBCA;
   border-style: solid;
   background-color: #EBDBCA;
-
 }
 
 .noReviewsYet {
