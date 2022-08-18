@@ -12,10 +12,11 @@ const reviewSchema = new mongoose.Schema({
         type: Number, min: 1, max: 5
     },
     user: {
-        type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true}, 
+        type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true
+    },
         userName: String,
         userAvatar: String
-    },
+},
 {
     timestamps: true,
 }

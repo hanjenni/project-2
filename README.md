@@ -1,35 +1,25 @@
-# passport-boilerplate
+# Honest Schools 
+As a former teacher, I realized there was lack of information available that kept districts accountable for providing teachers with honest information about the schools's community, administrators and work-life balance.
+
+Honest Schools was created so that teachers would have a platform where they can freely discuss the working environment of different school districts so they can find a workplace that is suited to their needs. 
+
+# Visuals
+
+# Technologies Used
+* Canva
+* ColorSpace
+
+# Deployment Link
+
+# Planning
 
 
-This is your passport boilerplate.
+# Planned Future Enhancements
+* Add a resource page with direct links
+* Map of district locations with API
+* Display distriscts from highest rated to lowest
+* Able to log in and leave reviews privately (public for the project)
 
-## Setup 
-
-1. Clone the repo
-2. Rename the folder to your Project
-3. Delete the `.git` file, when you are in the root of the file, you can press `ls` and you should see a `.git` file, then go ahead and run `rm -rf .git`
-
-
-#### Setup your git repo
-0. Setup your `.env` file and add all the things you need! (look at mongoose movies for reference!)
-1. in the project root `git init`
-2. `git add .` to add all the starter code
-3. `git commit -m "setup boilerplate"` 
-4. go to github and create your github and create a repo (Without a readme or liscense you can add that later!)
-5. copy the remote address
-6. In your terminal add the remote `git remote add origin yourGithubRepo'sAddressGoesHere`
-7. `git pull origin main` If a screen pulls up asking you to do something just press `:q` and then `enter` (thats vim btw :) )
-8. `git push origin main`
-
-#### Setup your login (THE APP WON'T WORK until you do, no VIEWS are setup, or the landing route)
-
-0. Setup your database connection string
-1. Then Setup Your User Model, 
-2. Follow the steps from the lesson plan to get your Google login credentials for your `.env` file (create the file if you haven't), or you can just copy the ones from earlier if you want to reuse them.
-3. Setup the Code in your config passport 
-4. Setup your callback routes in your `routes/index`
-5. Setup a view and test your login!
-
-#### Make a commit 
-
-```git commit -m "setup up oauth and User Model"```
+# Credit and Thanks
+* Thank you to all the instructors and TA's for all your help
+* Special thanks to Jeff and Katharyn 
