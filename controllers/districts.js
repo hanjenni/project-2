@@ -36,8 +36,7 @@ function create(req, res) {
     console.log(req.body, '<-new district')
     District.create(req.body, function(err, districtDocuments) {
         if(err) {
-            console.log(err, '<-err in create controller');
-            
+            console.log(err, '<-err in create controller');   
         }
         res.redirect('/districts');
         console.log(districtDocuments, '<-added to db')

@@ -7,7 +7,6 @@
     <h3><%= districtInfo.districtName %> </h3>
 <h5>Address:</h5>
   <h3> <%= districtInfo.address %> </h3>
-
 </section>
 
 
@@ -17,7 +16,7 @@
 <form id="review-info" method="POST"
 action="/districts/<%= districtInfo._id %>/reviews">
 <section class="districtReview">
-  <br><h2 id="headline">District Review</h2>
+  <br><h2 id="headline">Leave A Review</h2>
 <label class="review">Review:</label>
 <br><textarea class="review" name="content"></textarea><br>
 <br><label class="comRating">Community Rating:</label>
@@ -56,12 +55,12 @@ action="/districts/<%= districtInfo._id %>/reviews">
     <table class="reviewTable">
       <thead>
         <tr>
-          <th>Member:</th>
-          <th>Date:</th>
-          <th>Community:</th>
-          <th>Admin Support:</th>
-          <th>Work-Life Balance:</th>
-          <th>Review:</th>
+          <th>Member</th>
+          <th>Date</th>
+          <th>Community</th>
+          <th>Admin <br>Support</th>
+          <th>Work-Life <br>Balance</th>
+          <th>Review</th>
         </tr>
       </thead>
       <tbody>
