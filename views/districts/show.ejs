@@ -2,11 +2,11 @@
 
 <!--clicked information-->
 <section class="infoPage">
-<h1>School Information</h1>
-<h4>District Name:</h4>
-    <h2><%= districtInfo.districtName %> </h2>
-<h4>Address:</h4>
-  <h2> <%= districtInfo.address %> </h2>
+<h1>School Information:</h1>
+<h5>District Name:</h5>
+    <h3><%= districtInfo.districtName %> </h3>
+<h5>Address:</h5>
+  <h3> <%= districtInfo.address %> </h3>
 
 </section>
 
@@ -14,10 +14,10 @@
 <!--submit review box-->
 <% if (user) { %>
   
-<br><br><h2 id="headline">District Review</h2>
 <form id="review-info" method="POST"
 action="/districts/<%= districtInfo._id %>/reviews">
 <section class="districtReview">
+  <br><h2 id="headline">District Review</h2>
 <label class="review">Review:</label>
 <br><textarea class="review" name="content"></textarea><br>
 <br><label class="comRating">Community Rating:</label>
@@ -65,11 +65,12 @@ action="/districts/<%= districtInfo._id %>/reviews">
         </tr>
       </thead>
       <tbody>
-        <% let total = 0 %> 
-        <% districtInfo.reviews.forEach(function(d) { %>
-          <% total += d.comRating %> 
-          <% total += d.adminRating %> 
-          <% total += d.workRating %> 
+          
+         <% let total = 0 %> 
+          <% districtInfo.reviews.forEach(function(d) { %>
+            <% total += d.comRating %> 
+           <% total += d.adminRating %> 
+           <% total += d.workRating %>  
          
           
           <tr>
@@ -86,7 +87,7 @@ action="/districts/<%= districtInfo._id %>/reviews">
                 </form>
 
 <!--Edit District Review-->
-<br><br><h2>Edit District Review</h2>
+<h4>Edit District Review</h4>
   <form action="/districts/<%= districtInfo._id %>/reviews/<%= d._id %>?_method=PUT" method="POST">
     <label>Review:</label>
     <br><textarea name = "content"></textarea>
@@ -127,7 +128,7 @@ action="/districts/<%= districtInfo._id %>/reviews">
         </tbody>
     </table>
   <% } else { %>
-    <h5>No Reviews Yet</h5>
+    <h5 class="noReviewsYet">No Reviews Yet</h5>
   <% } %>
-  <% } %>
+   <% } %> 
 </section>

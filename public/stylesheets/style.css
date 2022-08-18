@@ -177,7 +177,7 @@ a{
 
 table thead th {
   padding: 5px;
-  border-bottom: 2px solid #424748;
+  border-bottom: 2px solid  #3B3A39;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -185,6 +185,8 @@ table td {
   padding: 10px;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
+  border: 1px solid;
+  border-color: #EBDBCA;
 }
 
 a:link { text-decoration: none; }
@@ -221,7 +223,14 @@ a:active { text-decoration: none; }
 
 }
 
+.noReviewsYet {
+  text-align: center;
+}
 
+.review-user img {
+  border-radius: 50%;
+  height: 25px;
+}
 
 
   
