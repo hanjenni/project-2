@@ -1,19 +1,22 @@
 <%- include('../partials/header') %>
- <h1 id="allSchoolDistricts">All School Districts</h1>
- <link rel='stylesheet' href='/stylesheets/style.css' />
- 
-<!--This is the page that shows all districts-->
-<section class="container">
- <% districts.forEach(function(d) { %>
-  <div class="all-list">
-      <h5>District Name:</h3>
-       <h3> <%= d.districtName %></h3>
-      <h5>Address: </h3>
-     <h3><%= d.address %></h3>     
- <a href="/districts/<%= d._id %>" class="detailsButton">DETAILS</a></div>
-<% }); %> 
-</section> 
-  
-<%- include('../partials/footer') %> 
+    <h1 id="allSchoolDistricts">All School Districts</h1>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
 
+    <!--This is the page that shows all districts-->
+    <section class="container">
+        <% districts.forEach(function(d) { %>
+            <div class="all-list">
+                <h5>District Name:</h3>
+                    <h3>
+                        <%= d.districtName %>
+                    </h3>
+                    <h5>Address: </h3>
+                        <h3>
+                            <%= d.address %>
+                        </h3>
+                        <a href="/districts/<%= d._id %>" class="detailsButton">DETAILS</a>
+            </div>
+            <% }); %>
+    </section>
 
+    <%- include('../partials/footer') %>
