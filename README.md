@@ -38,8 +38,7 @@ Honest Schools was created so that teachers would have a platform where they can
 * Add a resource page with direct links
 * Map of district locations with API
 * Display districts from highest rated to lowest
-* Able to log in and leave reviews privately (public for the project)
-* Responsive design for mobile use 
+* Able to log in and leave reviews privately (public for the project) 
 
 
 # Credit and Thanks
