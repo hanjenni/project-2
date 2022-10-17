@@ -56,10 +56,11 @@ a{
   text-align: center;
   padding: 10px;
   font-family: 'Montserrat', sans-serif;
-  width: 800px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   margin: 10px auto;
 }
+
 
 .container {
   color: #3B3A39;
@@ -72,10 +73,11 @@ a{
 
 .all-list {
   position: relative;
-  width: calc(400px - 30px);
-  height: calc(300px - 30px);
+  /* width: calc(400px - 30px); */
+  /* height: calc(300px - 30px); */
+  width: 350px;
   background: #EBDBCA;
-  float: left;
+  /* float: left; */
   margin: 15px;
   box-sizing: border-box;
   overflow:hidden;
@@ -138,7 +140,7 @@ a{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 100%;
 }
 
 #d.button {
@@ -209,5 +211,23 @@ a:active { text-decoration: none; }
   height: 25px;
 }
 
+@media only screen and (min-width: 768px) {
+  .home-page {
+    width: 800px;
+    height: 200px;
+  }
+  .image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
 
+  .all-list {
+   width: calc(400px - 30px); 
+   height: calc(300px - 30px); 
+   float: left;
+    
+  }
+}
   
